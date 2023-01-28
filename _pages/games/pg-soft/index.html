@@ -1,0 +1,21 @@
+---
+layout: pages
+title: PG Soft Games
+permalink: /pgsoft/
+active: pgsoft
+---
+
+<!--PG Soft Games--> 
+<div class="row row-cols-2" style="margin-top: 150px;">
+ {% for game in site.data.pg_soft %}
+  <div class="col">
+    <a href="../{{ game.url }}">
+     <img src="../assets/loader.gif" data-src="../assets/images/{{ game.img }}" alt="{{ game.title }}" class="img-fluid border-0 lazy">
+     <p>{{ game.title }}</p>
+    </a>
+  </div>
+ {% else %}
+  <p>Tidak ada data.</p>
+ {% endfor %}
+ </div>
+<!--/PG Soft Games--> 

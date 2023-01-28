@@ -1,0 +1,24 @@
+---
+layout: pages
+title: Slot Mania
+permalink: /slotmania/
+active: slotmania
+---
+
+<p>Informasi : <b>Slot Mania</b> masih berasal dari provider yang sama yaitu provider <b>Pragmatic Play</b>.</p>
+<br/>
+
+<!--Slot Mania Games--> 
+<div class="row row-cols-2">
+ {% for game in site.data.slotmania %}
+  <div class="col">
+    <a href="../{{ game.url }}">
+     <img src="../assets/loader.gif" data-src="../assets/images/{{ game.img }}" alt="{{ game.title }}" class="img-fluid border-0 lazy">
+     <p>{{ game.title }}</p>
+    </a>
+  </div>
+ {% else %}
+  <p>Tidak ada data.</p>
+ {% endfor %}
+ </div>
+<!--/Slot Mania Games--> 
